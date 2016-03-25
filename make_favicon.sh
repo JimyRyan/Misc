@@ -1,7 +1,7 @@
 # IE is still braindead so still use favicon.ico
 
-convert -resize x16 -gravity center -crop 16x16+0+0 -flatten -colors 256 input.png output-16x16.ico
-convert -resize x32 -gravity center -crop 32x32+0+0 -flatten -colors 256 input.png output-32x32.ico
+convert -resize x16 -gravity center -crop 16x16+0+0 -flatten -colors 256 -background transparent input.png output-16x16.ico
+convert -resize x32 -gravity center -crop 32x32+0+0 -flatten -colors 256 -background transparent input.png output-32x32.ico
 convert output-16x16.ico output-32x32.ico favicon.ico
 
 # Then, HTML needs to specify size="XxY" as largest size due to browser bugs
